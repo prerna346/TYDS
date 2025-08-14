@@ -3,7 +3,7 @@ name: Basic Commands
 on:
  push:
    branches:
-      -main
+      - main
 
 jobs:
   demo-commands:
