@@ -1,0 +1,22 @@
+name:Basic Commands
+
+on:
+ push:
+  brancher:
+   -main
+schedule:
+  -cron:*00*** #Every day at midnight UTC
+ workflow_dispath:#Manual trigger
+
+ job:
+  demo-commands:
+   runs-on:ubuntu-latest
+
+   steps:
+   -name:show current working directory
+   run:pwd
+
+   -name:List files in the dirctory
+   run:ls-la
+   
+  
