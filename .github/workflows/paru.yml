@@ -2,21 +2,21 @@ name: Basic Commands
 
 on:
  push:
-  brancher:
-   -main
-schedule:
-  -cron: *0 0* * *" #Every day at midnight UTC
- workflow_dispatch:#Manual trigger
+  branches:
+   - main
+ schedule:
+  - cron: "*/2 * * *" #Every day at midnight UTC
+ workflow_dispatch: #Manual trigger
 
- job:
-  demo-commands:
-   runs-on:ubuntu-latest
+jobs:
+ demo-commands:
+  runs-on: ubuntu-latest
 
-   steps:
+  steps:
    -name: show current working directory
-   run: pwd
+    run: pwd
 
-   -name: List files in the dirctory
-   run: ls-la
+   -name: List files in the directory
+    run: ls -la
    
   
